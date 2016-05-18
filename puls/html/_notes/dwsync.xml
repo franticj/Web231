@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name=".htaccess" server="csills02.com" local="131079983673248457" remote="128049264000000000" Dst="2" />
+<file name=".htaccess" server="csills02.com" local="131080874497688532" remote="131080657800000000" Dst="2" />
 <file name=".DS_Store" server="csills02.com" local="131079983686499215" remote="128654064000000000" Dst="2" />
 <file name="html_change_form.php" server="csills02.com" local="131079983686499215" remote="128884752000000000" Dst="2" />
 <file name="html_change_result.php" server="csills02.com" local="131079983687069247" remote="128654064000000000" Dst="2" />
@@ -13,4 +13,5 @@
 <file name="html_reset_form.php" server="csills02.com" local="131079983702040103" remote="128884752000000000" Dst="2" />
 <file name="index.php" server="csills02.com" local="131079983702050104" remote="128049264000000000" Dst="2" />
 <file name="html_reset_result.php" server="csills02.com" local="131079983702040103" remote="128654064000000000" Dst="2" />
+<file name="error_log" server="csills02.com" local="131080874497698532" remote="131080668600000000" Dst="2" />
 </dwsync>

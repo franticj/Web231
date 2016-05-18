@@ -16,7 +16,7 @@ define('LANGUAGE', 'EN'); // Currently available: EN (English) and NL (Dutch), o
 define('EMAIL', 'csills2313@gmail.com');
 
 define('LOGIN_URL', 'http://csills02.com/Web231/TeamProject/Web231/puls/');
-define('SUCCESS_URL', 'http://csills02.com/Web231/TeamProject/Web231/'); // URL to go to after successfull login
+define('SUCCESS_URL', 'http://csills02.com/Web231/TeamProject/Web231/redirect.php'); // URL to go to after successfull login
 
 // If ALLOW_RESET is set to false, users cannot reset their password when they have forgotten it.
 // This is offcourse less user friendly, but also more secure,
