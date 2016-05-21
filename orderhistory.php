@@ -2,9 +2,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>Customer Order History</title>
 </head>
 
 <body>
+ <?php
+ echo "<h2 align='center'>Order History for: </h2>";
+echo "<table align='center' style='border: solid 1px black;'>";
+echo "<tr><th>Id</th><th>Customer Name</th><th>Product Name</th><th>Unit Price</th><th>Ship Address</th><th>Product Code</th><th>Ship Date</th></tr>";
+
+class TableRows extends RecursiveIteratorIterator {
+    function __construct($it) {
+        parent::__construct($it, self::LEAVES_ONLY);
+    }
+
+    function current() {
+        return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+    }
+
+    function beginChildren() {
+        echo "<tr>";
+    }
+
+    function endChildren() {
+        echo "</tr>" . "\n";
+    }
+}
+
+$servername = "localhost";
+$username = "csillsze";
+$password = "Levon252!";
+$dbname = "csillsze_virtualplanet";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare("SELECT orderid, custname, prodname, CONCAT('$',itemprice), shipaddress, prodcode, date_format(orderdate,'%M %D %Y') FROM orders");
+    $stmt->execute();
+
+    // set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+        echo $v;
+    }
+}
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$conn = null;
+echo "</table>";
+?> 
 </body>
 </html>
