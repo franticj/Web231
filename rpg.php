@@ -1,3 +1,35 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>RPG Titles</title>
+</head>
+<body>
+
+
+  <div class="wrap-header">
+                   <header>
+
+        		  <nav>
+                  	<img src="">
+                		<ul>
+                        	<li><a href="http://www.jturne14.com/VirtualPlanet/action.php">Action</a></li>
+                            <li><a href="http://www.jturne14.com/VirtualPlanet/fighting.php">Fighting</a></li>
+                            <li><a href="http://www.jturne14.com/VirtualPlanet/rpg.php">RPG</a></li>
+                            <li><a href="http://www.jturne14.com/VirtualPlanet/shooter.php">Shooter</a></li>
+                        </ul>
+                        
+                 </nav>
+</header>
+</div>  
+
+
+
+
+
+
 <?php
 session_start();
 include_once("config.php");
