@@ -186,7 +186,7 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					echo '<br /><b>Stuff to store in database :</b><br />';
 					
 					echo '<pre>';
-					/*
+					
 					#### SAVE BUYER INFORMATION IN DATABASE ###
 					//see (http://www.sanwebe.com/2013/03/basic-php-mysqli-usage) for mysqli usage
 					//use urldecode() to decode url encoded strings.
@@ -195,16 +195,16 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					$buyerEmail = urldecode($httpParsedResponseAr["EMAIL"]);
 					
 					//Open a new connection to the MySQL server
-					$mysqli = new mysqli('host','username','password','database_name');
+					$mysqli = new mysqli('localhost','csillsze','Levon252!','csillsze_virtualplanet');
 					
 					//Output any connection error
 					if ($mysqli->connect_error) {
 						die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 					}		
 					
-					$insert_row = $mysqli->query("INSERT INTO BuyerTable 
-					(BuyerName,BuyerEmail,TransactionID,ItemName,ItemNumber, ItemAmount,ItemQTY)
-					VALUES ('$buyerName','$buyerEmail','$transactionID','$ItemName',$ItemNumber, $ItemTotalPrice,$ItemQTY)");
+					$insert_row = $mysqli->query("INSERT INTO orders 
+					(prodname, itemprice, custname, custemail, transactionid, itemnumber, itemqty  )
+					VALUES ('$ItemName',$ItemTotalPrice,'$buyerName','$buyerEmail','$transactionID','$ItemNumber','$ItemQTY')");
 					
 					if($insert_row){
 						print 'Success! ID of last inserted record is : ' .$mysqli->insert_id .'<br />'; 
@@ -212,7 +212,7 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 						die('Error : ('. $mysqli->errno .') '. $mysqli->error);
 					}
 					
-					*/
+					 
 					
 					echo '<pre>';
 					print_r($httpParsedResponseAr);
