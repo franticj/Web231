@@ -13,7 +13,7 @@ session_regenerate_id(true); // Generate new session id and delete old (PHP >= 5
 include_once("puls/includes/check.php");
 // ### check login end ###
 ?>
-<meta http-equiv="refresh" content="0; url=indexcart.php" />
+<meta http-equiv="refresh" content="0; url=index.php" />
 <title>Untitled Document</title>
 </head>
 

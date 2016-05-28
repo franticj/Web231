@@ -9,12 +9,12 @@ $db_host 		= 'localhost';
 
 //paypal settings
 $PayPalMode 			= 'sandbox'; // sandbox or live
-$PayPalApiUsername 		= 'franticj-facilitator_api1.gmail.com'; //PayPal API Username
-$PayPalApiPassword 		= 'HHY34955KW38LM4W'; //Paypal API password
-$PayPalApiSignature 	= 'AFcWxV21C7fd0v3bYYYRCpSSRl31A3TgtA9BwRSLKIyees6-DZ36bZHF'; //Paypal API Signature
+$PayPalApiUsername 		= 'csills2313-facilitator_api1.gmail.com'; //PayPal API Username
+$PayPalApiPassword 		= 'XK7LEYZSGYQ49TDU'; //Paypal API password
+$PayPalApiSignature 	= 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ahnl7nrgSuf2B.oVj8f3ijSER9e6'; //Paypal API Signature
 $PayPalCurrencyCode 	= 'USD'; //Paypal Currency Code
-$PayPalReturnURL 		= 'http://www.jturne14.com/VirtualPlanet/paypal-express-checkout/'; //Point to paypal-express-checkout page
-$PayPalCancelURL 		= 'http://www.jturne14.com/VirtualPlanet/paypal-express-checkout/cancel_url.html'; //Cancel URL if user clicks cancel
+$PayPalReturnURL 		= 'http://csills02.com/Web231/TeamProject/Web231/carter/paypal-express-checkout/'; //Point to paypal-express-checkout page
+$PayPalCancelURL 		= 'http://csills02.com/Web231/TeamProject/Web231/carter/paypal-express-checkout/cancel_url.html'; //Cancel URL if user clicks cancel
 
 //Additional taxes and fees											
 $HandalingCost 		= 0.00;  //Handling cost for the order.
