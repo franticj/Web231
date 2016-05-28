@@ -16,7 +16,7 @@ ul.products {
 }
 ul.products li {
 	display: inline-block;
-	max-width: 200px;
+	max-width: 230px;
 	padding: 10px;
 	background-color: #FFFFFF;
 	margin: 10px;

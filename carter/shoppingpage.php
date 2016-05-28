@@ -6,14 +6,7 @@ include_once("config.php");
 //current URL of the Page. cart_update.php redirects back to this URL
 $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Shopping Cart</title>
-<link href="style/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+
 
 <h1 align="center">Game Titles</h1>
 
@@ -108,5 +101,3 @@ echo $products_item;
 }
 ?>    
 <!-- Products List End -->
-</body>
-</html>

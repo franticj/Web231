@@ -66,7 +66,7 @@ include_once("config.php");
     </tr>
     <tr>
         <td colspan="5">
-            <a href="indexcart.php" class="button">Add More Items</a>
+            <a href="shoppingpage.php" class="button">Add More Items</a>
             <button type="submit">Update</button>
             <a href="paypal-express-checkout" ><img src="images/paypal.png" width="179" height="76"></a>
         </td>

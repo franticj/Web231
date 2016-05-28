@@ -15,7 +15,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Virtual Planet</title>
 <link rel="stylesheet" type="text/css" href="css/main.css">
-
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
 <script src="../../../Scripts/swfobject_modified.js" type="text/javascript"></script>
 </head>
 <body>
@@ -76,8 +76,8 @@ else{
 <script type="text/javascript">
 swfobject.registerObject("FlashID");
     </script>
-<div>
+
 <?php include 'shoppingpage.php';?>
-</div>
+
 </body>
 </html>
