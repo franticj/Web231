@@ -190,10 +190,13 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					#### SAVE BUYER INFORMATION IN DATABASE ###
 					//see (http://www.sanwebe.com/2013/03/basic-php-mysqli-usage) for mysqli usage
 					//use urldecode() to decode url encoded strings.
-					
+					$paypal_data1 = '';
 					$buyerName = urldecode($httpParsedResponseAr["FIRSTNAME"]).' '.urldecode($httpParsedResponseAr["LASTNAME"]);
 					$buyerEmail = urldecode($httpParsedResponseAr["EMAIL"]);
-					
+					$transactionID = urldecode($httpParsedResponseAr["TRANSACTIONID"]);
+					$paypal_data1 .= ($p_item['itm_name']);
+					$paypal_data2 .= ($p_item['itm_code']);
+					$paypal_data3 .= ($p_item['itm_qty']);
 					//Open a new connection to the MySQL server
 					$mysqli = new mysqli('localhost','csillsze','Levon252!','csillsze_virtualplanet');
 					
@@ -204,7 +207,7 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					
 					$insert_row = $mysqli->query("INSERT INTO orders 
 					(prodname, itemprice, custname, custemail, transactionid, itemnumber, itemqty  )
-					VALUES ('$ItemName',$ItemTotalPrice,'$buyerName','$buyerEmail','$transactionID','$ItemNumber','$ItemQTY')");
+					VALUES ('$paypal_data1',$ItemTotalPrice,'$buyerName','$buyerEmail','$transactionID','$paypal_data2','$paypal_data3')");
 					
 					if($insert_row){
 						print 'Success! ID of last inserted record is : ' .$mysqli->insert_id .'<br />'; 
