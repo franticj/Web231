@@ -204,7 +204,6 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					if ($mysqli->connect_error) {
 						die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 					}		
-					
 					$insert_row = $mysqli->query("INSERT INTO orders 
 					(prodname, itemprice, custname, custemail, transactionid, itemnumber, itemqty  )
 					VALUES ('$paypal_data1',$ItemTotalPrice,'$buyerName','$buyerEmail','$transactionID','$paypal_data2','$paypal_data3')");
@@ -214,8 +213,6 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					}else{
 						die('Error : ('. $mysqli->errno .') '. $mysqli->error);
 					}
-					
-					 
 					
 					echo '<pre>';
 					print_r($httpParsedResponseAr);
