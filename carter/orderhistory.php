@@ -30,7 +30,8 @@ else{
  <?php
  echo "<h2 align='center'>Order History for: </h2>";
 echo "<table align='center' style='border: solid 1px black;'>";
-echo "<tr><th>OrderId</th><th>Product Name</th><th>Item Price</th><th>Customer Name</th><th>Customer Email</th><th>Trans ID</th><th>Item Number</th><th>Quantity</th><th>Order Date</th></tr>";
+echo "<tr><th>OrderId</th><th>Customer Name</th><th>Customer Email</th><th>Trans ID</th><th>Total Price</th><th>Order Date</th><th>Product Name</th><th>Item Number</th><th>Quantity</th></tr>";
+//<th>Product Name</th><th>Item Price</th><th>Item Number</th><th>Quantity</th>
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
@@ -57,8 +58,9 @@ $dbname = "csillsze_virtualplanet";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT orderid, prodname, CONCAT('$',itemprice), custname, custemail, transactionid, itemnumber, itemqty,   date_format(orderdate,'%M %D %Y') FROM orders");
+    $stmt = $conn->prepare("SELECT orders.orderid, custname, custemail, transactionid, totalprice, date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items");
     $stmt->execute();
+//prodname, CONCAT('$',itemprice), itemnumber, itemqty,
 
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

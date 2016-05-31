@@ -194,26 +194,34 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					$buyerName = urldecode($httpParsedResponseAr["FIRSTNAME"]).' '.urldecode($httpParsedResponseAr["LASTNAME"]);
 					$buyerEmail = urldecode($httpParsedResponseAr["EMAIL"]);
 					$transactionID = urldecode($httpParsedResponseAr["TRANSACTIONID"]);
-					$paypal_data1 .= ($p_item['itm_name']);
-					$paypal_data2 .= ($p_item['itm_code']);
-					$paypal_data3 .= ($p_item['itm_qty']);
+					foreach($paypal_product['items'] as $key=>$p_item) { 
+					$paypal_data1 .= ($p_item['itm_name']).' ';
+					$paypal_data2 .= ($p_item['itm_code']).' ';
+					$paypal_data3 .= ($p_item['itm_qty']). ' ';
+					$paypal_data4 .= ($p_item['itm_price']). ' ';
+					}
 					//Open a new connection to the MySQL server
 					$mysqli = new mysqli('localhost','csillsze','Levon252!','csillsze_virtualplanet');
 					
 					//Output any connection error
 					if ($mysqli->connect_error) {
 						die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
-					}		
+					}
+					//foreach($paypal_product['items'] as $key=>$p_item) { 		
 					$insert_row = $mysqli->query("INSERT INTO orders 
-					(prodname, itemprice, custname, custemail, transactionid, itemnumber, itemqty  )
-					VALUES ('$paypal_data1',$ItemTotalPrice,'$buyerName','$buyerEmail','$transactionID','$paypal_data2','$paypal_data3')");
-					
+					(custname, custemail, transactionid, totalprice)
+					VALUES ('$buyerName','$buyerEmail','$transactionID','$ItemTotalPrice')");
+					//}
+					//foreach($paypal_product['items'] as $key=>$p_item) { 
+					$insert_row = $mysqli->query("INSERT INTO line_items (prodname, itemnumber, itemqty, orderid, itemprice)
+					VALUES ('$paypal_data1', '$paypal_data2','$paypal_data3', LAST_INSERT_ID(), '$paypal_data4')");
+					//prodname, itemprice,, itemnumber, itemqty Values('$paypal_data1',$ItemTotalPrice,'$paypal_data2','$paypal_data3')
 					if($insert_row){
 						print 'Success! ID of last inserted record is : ' .$mysqli->insert_id .'<br />'; 
 					}else{
 						die('Error : ('. $mysqli->errno .') '. $mysqli->error);
 					}
-					
+	                //}
 					echo '<pre>';
 					print_r($httpParsedResponseAr);
 					echo '</pre>';
