@@ -195,10 +195,10 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					$buyerEmail = urldecode($httpParsedResponseAr["EMAIL"]);
 					$transactionID = urldecode($httpParsedResponseAr["TRANSACTIONID"]);
 					foreach($paypal_product['items'] as $key=>$p_item) { 
-					$paypal_data1 .= ($p_item['itm_name']).' ';
-					$paypal_data2 .= ($p_item['itm_code']).' ';
-					$paypal_data3 .= ($p_item['itm_qty']). ' ';
-					$paypal_data4 .= ($p_item['itm_price']). ' ';
+					$paypal_data1 .= ($p_item['itm_name']).'</BR> ';
+					$paypal_data2 .= ($p_item['itm_code']).'</BR> ';
+					$paypal_data3 .= ($p_item['itm_qty']). '</BR> ';
+					$paypal_data4 .= ($p_item['itm_price']). '</BR> ';
 					}
 					//Open a new connection to the MySQL server
 					$mysqli = new mysqli('localhost','csillsze','Levon252!','csillsze_virtualplanet');

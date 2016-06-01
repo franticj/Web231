@@ -17,10 +17,10 @@ $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_
 <header style="background-color:#000; color:#FFF">
   <h2>Welcome to Virtual Planet. Logo goes here</h2><span><?php if(isset($_COOKIE['c_name'])){  
     $cookie = $_COOKIE['c_name'];
-    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/puls/logout.php'>Sign Out<a/> ";
+    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
 }
 else{
-    print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/puls/index.php'>Please sign in here<a/>";
+    print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/index.php'>Please sign in here<a/>";
     // ### check login start ###
 //session_start();
 //session_regenerate_id(true); // Generate new session id and delete old (PHP >= 5 only)
@@ -58,7 +58,7 @@ $dbname = "csillsze_virtualplanet";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT orders.orderid, custname, custemail, transactionid, totalprice, date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items");
+    $stmt = $conn->prepare("SELECT orders.orderid, custname, custemail, transactionid, totalprice, date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items WHERE orders.orderid = line_items.orderid");
     $stmt->execute();
 //prodname, CONCAT('$',itemprice), itemnumber, itemqty,
 
