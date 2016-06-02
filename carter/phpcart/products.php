@@ -22,7 +22,7 @@
 		document.form1.submit();
 	}
 </script>
-<link rel="stylesheet" type="text/css" href="../style/style.css"/>
+<link rel="stylesheet" type="text/css" href="../style/cart.css"/>
 </head>
 
 

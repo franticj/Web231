@@ -2,6 +2,11 @@
 session_start();
 include_once("../config.php");
 include_once("paypal.class.php");
+if(isset($_COOKIE['c_name'])){
+$accountName = $_COOKIE['c_name'];
+}else{
+	$accountName = 'Guest';
+}
 
 $paypalmode = ($PayPalMode=='sandbox') ? '.sandbox' : '';
 
@@ -209,8 +214,8 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					}
 					//foreach($paypal_product['items'] as $key=>$p_item) { 		
 					$insert_row = $mysqli->query("INSERT INTO orders 
-					(custname, custemail, transactionid, totalprice)
-					VALUES ('$buyerName','$buyerEmail','$transactionID','$ItemTotalPrice')");
+					(accountname, custname, custemail, transactionid, totalprice)
+					VALUES ('$accountName','$buyerName','$buyerEmail','$transactionID','$ItemTotalPrice')");
 					//}
 					//foreach($paypal_product['items'] as $key=>$p_item) { 
 					$insert_row = $mysqli->query("INSERT INTO line_items (prodname, itemnumber, itemqty, orderid, itemprice)

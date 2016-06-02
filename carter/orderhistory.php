@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Customer Order History</title>
-<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<link rel="stylesheet" type="text/css" href="style/cart.css"/>
 </head>
 <?php
 session_start();
@@ -28,9 +28,16 @@ else{
 // ### check login end ###
     }?></span></header>
  <?php
- echo "<h2 align='center'>Order History for: </h2>";
+ if(isset($_COOKIE['c_name'])){
+$accountName = $_COOKIE['c_name'];
+echo "<h2 align='center'>Order History for: $accountName</h2>";
+}else{
+	$accountName = 'Guest';
+	echo "<h2 align='center'>Order History for: $accountName</h2>";
+}
+ 
 echo "<table align='center' style='border: solid 1px black;'>";
-echo "<tr><th>OrderId</th><th>Customer Name</th><th>Customer Email</th><th>Trans ID</th><th>Total Price</th><th>Order Date</th><th>Product Name</th><th>Item Number</th><th>Quantity</th></tr>";
+echo "<tr><th>OrderId</th><th>Account Name</th><th>Customer Name</th><th>Customer Email</th><th>Trans ID</th><th>Total Price</th><th>Order Date</th><th>Product Name</th><th>Item Number</th><th>Quantity</th></tr>";
 //<th>Product Name</th><th>Item Price</th><th>Item Number</th><th>Quantity</th>
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -58,7 +65,7 @@ $dbname = "csillsze_virtualplanet";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT orders.orderid, custname, custemail, transactionid, totalprice, date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items WHERE orders.orderid = line_items.orderid");
+    $stmt = $conn->prepare("SELECT orders.orderid, accountname, custname, custemail, transactionid, totalprice, date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items WHERE orders.orderid = line_items.orderid AND accountname='$accountName'");
     $stmt->execute();
 //prodname, CONCAT('$',itemprice), itemnumber, itemqty,
 

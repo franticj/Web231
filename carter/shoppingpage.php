@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="style/cart.css"/>
 <?php
 session_start();
 include_once("config.php");

@@ -15,10 +15,10 @@
         		  <nav>
                   	<img src="">
                 		<ul>
-                        	<li><a href="http://www.jturne14.com/VirtualPlanet/action.php">Action</a></li>
-                            <li><a href="http://www.jturne14.com/VirtualPlanet/fighting.php">Fighting</a></li>
-                            <li><a href="http://www.jturne14.com/VirtualPlanet/rpg.php">RPG</a></li>
-                            <li><a href="http://www.jturne14.com/VirtualPlanet/shooter.php">Shooter</a></li>
+                        	<li><a href="action.php">Action</a></li>
+                            <li><a href="fighting.php">Fighting</a></li>
+                            <li><a href="rpg.php">RPG</a></li>
+                            <li><a href="shooter.php">Shooter</a></li>
                         </ul>
                         
                  </nav>

@@ -36,10 +36,10 @@ else{
     }?></span></div>
                    <nav>
                 		<ul>
-                        	<li><a href="">Action</a></li>
-                            <li><a href="">Fighter</a></li>
-                            <li><a href="">Role-Play</a></li>
-                            <li><a href="">Shooter</a></li>
+                        	<li><a href="action.php">Action</a></li>
+                            <li><a href="fighting.php">Fighter</a></li>
+                            <li><a href="rpg.php">Role-Play</a></li>
+                            <li><a href="shooter.php">Shooter</a></li>
                         </ul>
                         
                         
