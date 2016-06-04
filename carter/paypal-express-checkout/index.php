@@ -204,6 +204,7 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					$paypal_data2 .= ($p_item['itm_code']).'</BR> ';
 					$paypal_data3 .= ($p_item['itm_qty']). '</BR> ';
 					$paypal_data4 .= ($p_item['itm_price']). '</BR> ';
+					//'itm_price'=>$obj->price, ($obj->price);
 					}
 					//Open a new connection to the MySQL server
 					$mysqli = new mysqli('localhost','csillsze','Levon252!','csillsze_virtualplanet');
