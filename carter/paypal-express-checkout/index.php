@@ -207,7 +207,7 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					//'itm_price'=>$obj->price, ($obj->price);
 					}
 					//Open a new connection to the MySQL server
-					$mysqli = new mysqli('localhost','jturneon','Z11n6jfh?','jturneon_virtualplanet');
+					$mysqli = new mysqli('localhost','csillsze','Levon252!','csillsze_virtualplanet');
 					
 					//Output any connection error
 					if ($mysqli->connect_error) {
@@ -250,5 +250,5 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 
 <?php
  
-  echo '<a href="http://www.jturne14.com/VirtualPlanet/index.php">Travel back to Virtual Planet</a>';
+  echo '<a href="http://csills02.com/Web231/TeamProject/Web231/carter/index.php">Travel back to Virtual Planet</a>';
 ?>
