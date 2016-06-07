@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Customer Order History</title>
-<link rel="stylesheet" type="text/css" href="style/cart.css"/>
+<link rel="stylesheet" type="text/css" href="style/header.css"/>
 </head>
 <?php
 session_start();
@@ -14,8 +14,15 @@ include_once("config.php");
 $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 ?>
 <body>
-<header style="background-color:#000; color:#FFF">
-  <h2>Welcome to Virtual Planet. Logo goes here</h2><span><?php if(isset($_COOKIE['c_name'])){  
+<div class="wrap-header">
+                   <header>
+                                    
+                   <img src="images/logo.png">
+                   <div class="greeting" id="greeting" style="width:45%;">
+  
+  
+  <b>Welcome to Virtual Planet.</b>
+  <span><?php if(isset($_COOKIE['c_name'])){  
     $cookie = $_COOKIE['c_name'];
     print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
 }
@@ -26,14 +33,51 @@ else{
 //session_regenerate_id(true); // Generate new session id and delete old (PHP >= 5 only)
 //include_once("puls/includes/check.php");
 // ### check login end ###
-    }?></span></header>
+    }?></span></div>
+                   <nav>
+                	<ul>
+                        <li><a href="action.php">Action</a></li>
+                            <li><a href="fighting.php">Fighter</a></li>
+                            <li><a href="rpg.php">Role-Play</a></li>
+                            <li><a href="shooter.php">Shooter</a></li>
+                        </ul>
+                        
+                        
+                        
+                 </nav>
+                 
+                 
+                 <div id="account">
+                 		<ul>
+                        	<li><a href="">Account</a></li>
+                            <li><a href="">Wishlist</a></li>
+                            <li><a href="">Cart</a></li>
+                        </ul>
+                 </div>
+                         
+                  <div id="searchbar">
+ 					<form  class="customform l-8 s-12" action="http://google.com/">
+                        <div class="s-9"><input type="text" title="Search form" /></div>
+                        <div class="s-3"><button type="submit">Search</button></div>
+                     </form>
+                     </div>
+        		  
+               
+          <!--</div>  -->    
+</header>
+</div>
+<div class="clearboth"></div>
  <?php
  if(isset($_COOKIE['c_name'])){
 $accountName = $_COOKIE['c_name'];
+echo "<div id='history'>";
 echo "<h2 align='center'>Order History for: $accountName</h2>";
+echo "</div>";
 }else{
 	$accountName = 'Guest';
+	echo "<div id='history'>";
 	echo "<h2 align='center'>Order History for: $accountName</h2>";
+	echo "</div>";
 }
  
 echo "<table align='center' style='border: solid 1px black;'>";
@@ -65,7 +109,7 @@ $dbname = "csillsze_virtualplanet";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT orders.orderid, accountname, custname, custemail, transactionid, itemprice, totalprice, date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items WHERE orders.orderid = line_items.orderid AND accountname='$accountName'");
+    $stmt = $conn->prepare("SELECT orders.orderid, accountname, custname, custemail, transactionid, itemprice, CONCAT('$',totalprice), date_format(orderdate,'%M %D %Y'), prodname, itemnumber, itemqty FROM orders, line_items WHERE orders.orderid = line_items.orderid AND accountname='$accountName'");
     $stmt->execute();
 //prodname, CONCAT('$',itemprice), itemnumber, itemqty,
 

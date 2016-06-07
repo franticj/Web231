@@ -1,30 +1,67 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="css/cart.css"/>
+<head>    
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>3DS Titles</title>
+	<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+    <link rel="stylesheet" type="text/css" href="style/xbox1.css"/>
 </head>
 <body>
 
 
   <div class="wrap-header">
                    <header>
-
-        		  <nav>
-                  	<img src="">
-                		<ul>
+                                    
+                   <img src="images/logo.png">
+                   <div class="greeting" id="greeting" style="width:45%;">
+  
+  
+  <b>Welcome to Virtual Planet.</b>
+  <span><?php if(isset($_COOKIE['c_name'])){  
+    $cookie = $_COOKIE['c_name'];
+    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
+}
+else{
+    print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/index.php'>Please sign in here<a/>";
+    // ### check login start ###
+//session_start();
+//session_regenerate_id(true); // Generate new session id and delete old (PHP >= 5 only)
+//include_once("puls/includes/check.php");
+// ### check login end ###
+    }?></span></div>
+                   <nav>
+                	<ul>
                         	<li><a href="xbox1.php">XBox One</a></li>
                             <li><a href="ps4.php">Playstation 4</a></li>
                             <li><a href="pc.php">PC</a></li>
                             <li><a href="3ds.php">Nintendo 3DS</a></li>
                         </ul>
                         
+                        
+                        
                  </nav>
+                 
+                 
+                 <div id="account">
+                 		<ul>
+                        	<li><a href="">Account</a></li>
+                            <li><a href="">Wishlist</a></li>
+                            <li><a href="">Cart</a></li>
+                        </ul>
+                 </div>
+                         
+                  <div id="searchbar">
+ 					<form  class="customform l-8 s-12" action="http://google.com/">
+                        <div class="s-9"><input type="text" title="Search form" /></div>
+                        <div class="s-3"><button type="submit">Search</button></div>
+                     </form>
+                     </div>
+        		  
+               
+          <!--</div>  -->    
 </header>
-</div>  
+</div>
 
 
 

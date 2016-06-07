@@ -2,65 +2,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<title>Virtual Planet - About Us</title>
+
+<link rel="stylesheet" type="text/css" href="style/aboutus.css"/>
 </head>
-<header id="header">
-<div class="logo>
-<object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="400">
-    <param name="movie" value="images/Planet Logo.swf" />
-    <param name="quality" value="high" />
-    <param name="wmode" value="opaque" />
-    <param name="swfversion" value="30.0.0.0" />
-    <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
-    <param name="expressinstall" value="../../../Scripts/expressInstall.swf" />
-    <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
-    <!--[if !IE]>-->
-    <object type="application/x-shockwave-flash" data="images/Planet Logo.swf" width="200" height="200">
-      <!--<![endif]-->
-      <param name="quality" value="high" />
-      <param name="wmode" value="opaque" />
-      <param name="swfversion" value="30.0.0.0" />
-      <param name="expressinstall" value="../../../Scripts/expressInstall.swf" />
-      <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
-      <div>
-        <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
-        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
-      </div>
-      <!--[if !IE]>-->
-    </object>
-    <!--<![endif]-->
-  </object>
-</div>
-<div class="greeting">
+
+<body>
+<div class="wrap-header">
+                   <header>
+                                    
+                   <img src="images/logo.png">
+                   <div class="greeting" id="greeting" style="width:45%;">
   
-  <h2>Welcome to Virtual Planet.</h2>
+  
+  <b>Welcome to Virtual Planet.</b>
   <span><?php if(isset($_COOKIE['c_name'])){  
     $cookie = $_COOKIE['c_name'];
     print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
 }
 else{
-    print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/puls/index.php'>Please sign in here<a/>";
+    print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/index.php'>Please sign in here<a/>";
     // ### check login start ###
 //session_start();
 //session_regenerate_id(true); // Generate new session id and delete old (PHP >= 5 only)
 //include_once("puls/includes/check.php");
 // ### check login end ###
     }?></span></div>
-    <div class="clearboth shoppage">
-    <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-    </header>
-<body>
+                   <nav>
+                	<ul>
+                        <li><a href="action.php">Action</a></li>
+                            <li><a href="fighting.php">Fighter</a></li>
+                            <li><a href="rpg.php">Role-Play</a></li>
+                            <li><a href="shooter.php">Shooter</a></li>
+                        </ul>
+                        
+                        
+                        
+                 </nav>
+                 
+                 
+                 <div id="account">
+                 		<ul>
+                        	<li><a href="">Account</a></li>
+                            <li><a href="">Wishlist</a></li>
+                            <li><a href="">Cart</a></li>
+                        </ul>
+                 </div>
+                         
+                  <div id="searchbar">
+ 					<form  class="customform l-8 s-12" action="http://google.com/">
+                        <div class="s-9"><input type="text" title="Search form" /></div>
+                        <div class="s-3"><button type="submit">Search</button></div>
+                     </form>
+                     </div>
+        		  
+               
+          <!--</div>  -->    
+</header>
+</div>
 <div class="clearboth"></div>
 <div style="margin-top:100px;" align="center">
-<form a name="contactform" method="post" action="send_form_email.php">
+<form  name="contactform" method="post" action="send_form_email.php">
 
-<table width="450px">
+<table id="contactform" width="450px">
 
 <tr>
 

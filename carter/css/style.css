@@ -17,8 +17,7 @@ body {
 	margin: 0 auto;
 	background-color:#e2e2e2;
 	height:auto;
-	width:100%;
-	
+	width:100%;	
 	
 }
 
@@ -412,3 +411,13 @@ a:active {
 	text-decoration:none;
 }
 
+#orderhistory {
+	color:#FFF !important;
+	border-style:solid;
+	border-width:1px;
+	margin-top:200px;
+	background-color:#FFF;
+}
+#orderhistory td{
+	color:#000;
+}

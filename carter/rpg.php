@@ -2,15 +2,14 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/cart.css"/>
-    <link rel="stylesheet" type="text/css" href="style/xbox1.css"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>PS4 Titles</title>
+	<title>RPG Titles</title>
+	<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+    <link rel="stylesheet" type="text/css" href="style/xbox1.css"/>
 </head>
 <body>
 
-
-  <div class="wrap-header">
+<div class="wrap-header">
                    <header>
                                     
                    <img src="images/logo.png">
@@ -32,10 +31,10 @@ else{
     }?></span></div>
                    <nav>
                 	<ul>
-                        	<li><a href="xbox1.php">XBox One</a></li>
-                            <li><a href="ps4.php">Playstation 4</a></li>
-                            <li><a href="pc.php">PC</a></li>
-                            <li><a href="3ds.php">Nintendo 3DS</a></li>
+                        <li><a href="action.php">Action</a></li>
+                            <li><a href="fighting.php">Fighter</a></li>
+                            <li><a href="rpg.php">Role-Play</a></li>
+                            <li><a href="shooter.php">Shooter</a></li>
                         </ul>
                         
                         
@@ -62,7 +61,6 @@ else{
           <!--</div>  -->    
 </header>
 </div>
-
 
 
 
@@ -120,7 +118,7 @@ if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
 
 <!-- Products List Start -->
 <?php
-$results = $mysqli->query("SELECT product_code, category, product_name, product_desc, platform, available, product_img_name, price FROM products WHERE platform=\"PS4\" ORDER BY id ASC");
+$results = $mysqli->query("SELECT product_code, category, product_name, product_desc, platform, available, product_img_name, price FROM products WHERE category=\"Role-Playing\" ORDER BY id ASC");
 if($results){ 
 $products_item = '<ul class="products">';
 //fetch results set as object and output HTML
@@ -140,7 +138,16 @@ $products_item .= <<<EOT
 	Price {$currency}{$obj->price} 
 	
 	<fieldset>
-
+	
+	<label>
+		<span>Platform</span>
+		<select name="product_system">
+		<option value="PS4">PS4</option>
+		<option value="XBox One">XBox One</option>
+        <option value="PC">PC</option>
+        <option value="3DS">3DS</option>
+		</select>
+	</label>
 	
 	<label>
 		<span>Quantity</span>
