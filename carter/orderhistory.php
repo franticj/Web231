@@ -34,12 +34,12 @@ else{
 //include_once("puls/includes/check.php");
 // ### check login end ###
     }?></span></div>
-                   <nav>
+                    <nav>
                 	<ul>
-                        <li><a href="action.php">Action</a></li>
-                            <li><a href="fighting.php">Fighter</a></li>
-                            <li><a href="rpg.php">Role-Play</a></li>
-                            <li><a href="shooter.php">Shooter</a></li>
+                        	<li><a href="xbox1.php">XBox One</a></li>
+                            <li><a href="ps4.php">Playstation 4</a></li>
+                            <li><a href="pc.php">PC</a></li>
+                            <li><a href="3ds.php">Nintendo 3DS</a></li>
                         </ul>
                         
                         
