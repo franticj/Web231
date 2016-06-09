@@ -45,7 +45,7 @@ else{
                  
                  <div id="account">
                  		<ul>
-                        	<li><a href="">Account</a></li>
+                        	<li><a href="puls/register.php">Create Account</a></li>
                             <li><a href="">Wishlist</a></li>
                             <li><a href="">Cart</a></li>
                         </ul>
