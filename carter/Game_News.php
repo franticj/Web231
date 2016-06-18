@@ -1,0 +1,2 @@
+<script type="text/javascript" src="http://chxo.com/feedsplitter/feedsplitter.php?format=jsxhtml&stylesheet=1&feed=http%3A%2F%2Fwww.gamespot.com%2Ffeeds%2Fnews%2F&target=_blank">
+</script><noscript>Javascript newsfeed here, see http://www.gamespot.com/feeds/news/.</noscript>

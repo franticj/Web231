@@ -1,0 +1,108 @@
+P.U.L.S.
+--------
+
+PHP User Login Script
+Version 1.1
+
+20080906
+
+Hi, how are you?
+
+P.U.L.S is a PHP scritp I wrote which enables users to register and then login to a website or -page. I tried to make it secure, user friendly and developer friendly. It is based on a script I found on evolt.org by jpmaster77 (http://evolt.org/php_login_script_with_remember_me_feature).
+The script also contains code by Paul Johnston (http://pajhome.org.uk/crypt/md5) and http://www.finalwebsites.com/snippets.php?id=39
+
+
+DOWNLOAD
+--------
+
+Download P.U.L.S at http://www.biepenlu.nl/biepenlu/pages/puls.php
+
+
+REQUIREMENTS
+------------
+
+Knowledge of installing PHP scripts and MySQL tables (I won't help you!)
+Apache webserver running Linux (might work on other servers as well, but didn't test it)
+PHP >= 5
+MySQL
+
+
+INSTALLING THE SCRIPT
+---------------------
+
+- Put the right values in the config.php file in the includes folder
+- Copy the files to a directory on your server
+- Rename the files named "ht.access" in the "html" and "includes" directory to ".htacces"
+- Set the permissions of the uploaded files to 644 and of the folders to 755
+- Run the MySQL query in the "database.sql" file
+
+
+FEATURES
+--------
+
+* Secure:
+
+- Passwords are sent to the server encrypted using javascript (sha1.js)
+- Passwords are stored encrypted on the server so the original password can never be found
+- Registration page is protected with Captcha
+- All input is checked and filtered using the PHP FILTER_SANITIZE_STRING filter
+
+* User friendly:
+
+- Users can reset their password using e-mail in case they forgot their password
+- Users can change their settings
+- Remember me feature remebers user when he/she returns to the website
+
+* Developer friendly:
+
+- You can leave the P.U.L.S files in their puls directory and protect any php page on your server with it.
+- All HTML files are in a seperate directory (called "html"); no need to change the programming code in order to change the design
+- Seperate language files for text wich is not in the HTML pages; make your own translation easily
+- All configuration in one file (located in "includes", called "config.php")
+- Open source!
+
+
+PROTECTING A PAGE
+-----------------
+
+You can leave the P.U.L.S files in the puls directory and protect any php page on your server with it.
+
+Copy this code to the top of every PHP page:
+
+<?php
+
+// ### check login start ###
+session_start();
+session_regenerate_id(true); // Generate new session id and delete old (PHP >= 5 only)
+include_once("includes/check.php"); // Change this to the right path
+// ### check login end ###
+
+?>
+
+"index.php" in the puls directory is an example of this.
+
+NOTE: Make sure to change the path to the check.php file to the right path, depending on the location of the page you want to protect.
+For example, if the page you want to protect is in the directory "pages" and the P.U.L.S. files are in the puls directory (and both the pages and puls directory are in the www root), the right path would be:
+include_once("../puls/includes/check.php");
+
+
+SOME LINKS
+----------
+
+Usefull articles about security:
+http://www.sitepoint.com/article/php-security-blunders/
+http://www.skrysak.com/articles/securephp1.php
+
+
+LEGAL STUFF
+-----------
+
+This is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this software; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA or visit www.gnu.org
+
+
+----------------------------------------------
+Code by Lutsen Stellingwerff (www.biepenlu.nl)

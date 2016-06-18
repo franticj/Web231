@@ -6,21 +6,21 @@
 	<title>3DS Titles</title>
 	<link rel="stylesheet" type="text/css" href="css/cart.css"/>
     <link rel="stylesheet" type="text/css" href="style/xbox1.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 
   <div class="wrap-header">
-                   <header>
-                                    
-                   <img src="images/logo.png">
+                   <header>                                
+                   <a href="index.php"><img height="92" src="images/Logo.jpg" width="93" /></a>
                    <div class="greeting" id="greeting" style="width:45%;">
   
   
   <b>Welcome to Virtual Planet.</b>
   <span><?php if(isset($_COOKIE['c_name'])){  
     $cookie = $_COOKIE['c_name'];
-    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
+    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " Or <a href='orderhistory.php'>View Order History.</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/>";
 }
 else{
     print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/index.php'>Please sign in here<a/>";
@@ -33,9 +33,10 @@ else{
                    <nav>
                 	<ul>
                         	<li><a href="xbox1.php">XBox One</a></li>
-                            <li><a href="ps4.php">Playstation 4</a></li>
+                            <li><a href="ps4.php">Play Station 4</a></li>
                             <li><a href="pc.php">PC</a></li>
                             <li><a href="3ds.php">Nintendo 3DS</a></li>
+                            <li><a href="rpg.php">RPG</a></li>
                         </ul>
                         
                         
@@ -46,19 +47,14 @@ else{
                  <div id="account">
                  		<ul>
                         	<li><a href="puls/register.php">Create Account</a></li>
-                            <li><a href="">Wishlist</a></li>
-                            <li><a href="">Cart</a></li>
+                            <li><a href="Game_News.php" TARGET="_blank">News Feed</a></li>
+                            <li><a href="VideoPage.html">Top Ten</a></li>
+                            <li><a href="view_cart.php">Cart</a></li>
+                            <li><a href="contact_us.php">Contact Us</a></li>
                         </ul>
                  </div>
                          
-                  <div id="searchbar">
- 					<form  class="customform l-8 s-12" action="http://google.com/">
-                        <div class="s-9"><input type="text" title="Search form" /></div>
-                        <div class="s-3"><button type="submit">Search</button></div>
-                     </form>
-                     </div>
-        		  
-               
+                 
           <!--</div>  -->    
 </header>
 </div>
@@ -163,5 +159,13 @@ echo $products_item;
 }
 ?>    
 <!-- Products List End -->
+<footer>
+       <p>Thank you for visiting Virtual Planet</p>
+       	<p>Created by Team 231 Jason~Carter~Christina~Lisa</p>
+      
+       </footer>  
 </body>
+
 </html>
+     </script>     					
+ 

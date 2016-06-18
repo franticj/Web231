@@ -21,16 +21,16 @@ ul.products li {
 	background-color: #FFFFFF;
 	margin: 10px;
 	border: 1px solid #EAEAEA;  
-	color: #3D3D3D;
+	color: #000000;
 }
 ul.products li h3 {
 	margin: -10px -10px 10px -10px;
 	padding: 10px;
 	text-align: center;
-	background-color: #F5F5F5;
+	background-color: #009900;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 1.1em;
-	color: #5A5A5A;
+	color: #000000;
 }
 ul.products li fieldset {
 	border: none;
@@ -78,6 +78,7 @@ button:hover, .button:hover{
 	height: 40px;
 	overflow: hidden;
 	margin-top: 5px;
+	color: #000000;
 }
 
 ul.shopping-cart{

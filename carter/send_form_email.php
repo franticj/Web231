@@ -33,8 +33,6 @@ if(isset($_POST['email'])) {
         echo $error."<br /><br />";
  
         echo "Please go back and fix these errors.<br /><br />";
-		
-		echo "<a href='aboutus.php'>Back</a>";
  
         die();
  

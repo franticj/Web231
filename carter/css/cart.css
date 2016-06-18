@@ -17,12 +17,13 @@ ul.products {
 }
 ul.products li {
 	display: inline-block;
-	max-width: 230px;
+	max-width: 320px;
 	padding: 10px;
 	background-color: #FFFFFF;
 	margin: 10px;
 	border: 1px solid #EAEAEA;  
 	color: #3D3D3D;
+	font-size: 0.8em;
 }
 ul.products li h3 {
 	margin: -10px -10px 10px -10px;
@@ -30,7 +31,7 @@ ul.products li h3 {
 	text-align: center;
 	background-color: #F5F5F5;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 1.1em;
+	font-size: 1.5em;
 	color: #5A5A5A;
 }
 ul.products li fieldset {

@@ -79,5 +79,7 @@ echo $current_url; ?>" />
 </form>
 </div>
 
+   <?php include('templates/footer.html'); ?>      
+  
 </body>
 </html>

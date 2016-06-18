@@ -1,0 +1,130 @@
+/* -----  HEADER ----- */
+
+header {
+	text-align: center;
+	position: fixed;
+    top: 0;
+    width: 100%;    
+	
+}
+
+header img {
+	float:left;
+	padding-left:5px;
+}
+
+nav {
+	margin-top:25px;
+ 	background:transparent;
+    padding: 0.5em;
+    text-align:center;
+	float:left;
+	
+}
+
+.wrap-header {
+	width:100%; 
+	height:7em;
+	background-color:#252525;
+	border-bottom: 2px solid #ff850c;
+	position:fixed;
+	margin-top:-200px;
+	margin-left:-10px;
+	
+}
+.clearboth {
+clear:both;
+}
+.greeting{
+	margin-top:10px;
+	font-size:.9em;
+	
+	
+}
+#greeting {
+  color:#fff;
+  
+}
+#history {
+color:#fff Important;
+margin-top:150px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #252525;
+}
+
+nav li, #account li {
+    float: left;
+}
+a {
+color:#00FF00;
+}
+
+li a {
+    /*display: block;*/
+    color:#ff850c;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+table {
+margin-top:50px;
+}
+
+
+#account {
+	margin-top:25px;
+	float:right;
+	padding:0.5em;
+}
+
+
+#account ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	float:right;
+}
+
+
+/* ---- HEADER SEARCH BAR ---- */
+
+
+#searchbar {
+	margin-top:-10px;
+	float:right;
+	width:30%;	
+}
+
+footer {
+ 	background-color: #252525;
+    padding: 0.5em;
+    text-align:center;
+	border-top: 2px solid #ff850c;
+	height:20%;
+	bottom:0;
+	overflow:hidden;
+	
+	
+}
+
+
+footer p {
+	text-indent: 3px;
+	color: #01ce0f;
+	text-align: center;
+}
+
+
+.footerformat {
+	width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}

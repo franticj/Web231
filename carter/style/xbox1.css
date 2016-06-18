@@ -15,7 +15,7 @@ header img {
 
 nav {
 	margin-top:25px;
- 	background:transparent;
+ 	background:black;
     padding: 0.5em;
     text-align:center;
 	float:left;
@@ -94,11 +94,3 @@ margin-top:50px;
 }
 
 
-/* ---- HEADER SEARCH BAR ---- */
-
-
-#searchbar {
-	margin-top:-10px;
-	float:right;
-	width:30%;	
-}

@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Customer Order History</title>
 <link rel="stylesheet" type="text/css" href="style/header.css"/>
+<link rel="stylesheet" href="css/history.css">
 </head>
 <?php
 session_start();
@@ -17,14 +18,14 @@ $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_
 <div class="wrap-header">
                    <header>
                                     
-                   <img src="images/logo.png">
-                   <div class="greeting" id="greeting" style="width:45%;">
+                   <a href="index.php"><img height="92" src="images/Logo.jpg" width="93"></a>
+                   <div id="greeting" class="greeting" style="width:45%;">
   
   
   <b>Welcome to Virtual Planet.</b>
   <span><?php if(isset($_COOKIE['c_name'])){  
     $cookie = $_COOKIE['c_name'];
-    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
+    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " Or <a href='orderhistory.php'>View Order History.</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/>";
 }
 else{
     print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/index.php'>Please sign in here<a/>";
@@ -166,6 +167,12 @@ if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
 
 }
 ?>
-
+<footer>
+       <p>Thank you for visiting Virtual Planet</p>
+       	<p>Created by Team 231 Jason~Carter~Christina~Lisa copyright 2016</p>
+       	<br><br/>
+       	
+       
+       </footer>
 </body>
 </html>

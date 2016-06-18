@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 <html lang="en">
-  <html>
+  
         <head>
                 <title> Virtual Planet </title>
                 <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
@@ -16,15 +16,14 @@
               <body>                                                     
  			<div class="wrap-header">
                    <header>
-                                    
-                   <img src="images/logo.png">
-                   <div class="greeting" style="width:45%;">
+                   <a href="index.php"><img height="92" src="images/Logo.jpg" width="93"></a>
+                   <div id="greeting" class="greeting" style="width:45%;">
   
   
   <b>Welcome to Virtual Planet.</b>
   <span><?php if(isset($_COOKIE['c_name'])){  
     $cookie = $_COOKIE['c_name'];
-    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/> ";
+    print "Hello " . $cookie . " Welcome Back &nbsp;<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/change.php'>Change Password</a>" . " Or <a href='orderhistory.php'>View Order History.</a>" . " If you are not " . $cookie . " then sign out here" . " <a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/logout.php'>Sign Out<a/>";
 }
 else{
     print "Welcome Guest." . "<a href='http://csills02.com/Web231/TeamProject/Web231/carter/puls/index.php'>Please sign in here<a/>";
@@ -35,11 +34,12 @@ else{
 // ### check login end ###
     }?></span></div>
                    <nav>
-                	<ul>
-                        	<li><a href="xbox1.php">XBox One</a></li>
+                		<ul>
+                            <li><a href="xbox1.php">XBox One</a></li>
                             <li><a href="ps4.php">Playstation 4</a></li>
                             <li><a href="pc.php">PC</a></li>
-                            <li><a href="3ds.php">Nintendo 3DS</a></li>
+                            <li><a href="rpg.php">RPG</a></li>
+                            <li><a href="3ds.php">Nintento 3DS</a></li>
                         </ul>
                         
                         
@@ -49,20 +49,15 @@ else{
                  
                  <div id="account">
                  		<ul>
-                        	<li><a href="puls/register.php">Create Account</a></li>
-                            <li><a href="">Wishlist</a></li>
-                            <li><a href="">Cart</a></li>
+                            <li><a href="puls/register.php">Create Account</a></li>
+                            <li><a href="Game_News.php" TARGET="_blank">News Feed</a></li>
+                            <li><a href="VideoPage.html">Top Ten</a></li>
+                            <li><a href="view_cart.php">Cart</a></li>
+                            <li><a href="contact_us.php">Contact Us</a></li>
                         </ul>
                  </div>
                          
-                  <div id="searchbar">
- 					<form  class="customform l-8 s-12" action="http://google.com/">
-                        <div class="s-9"><input type="text" title="Search form" /></div>
-                        <div class="s-3"><button type="submit">Search</button></div>
-                     </form>
-                     </div>
-        		  
-               
+                 
           <!--</div>  -->    
 </header>
 </div>
@@ -78,7 +73,7 @@ else{
       
                         		<div class="featured_image2">
                         			
-                        			<img src="images/featured3.png">
+                        			<img src="images/featured3.png"  height="310" width="300">
                                    
                         		</div>
                  				
@@ -92,10 +87,9 @@ else{
                 
                 
                 <div class="content">
-                	<h2>News</h2>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue risus eu elit semper condimentum. Vivamus feugiat a nisi eget consequat. Sed vulputate fermentum nibh, ac rhoncus tortor sagittis vitae. In ornare, nisl quis convallis condimentum, ligula nibh porttitor augue, nec sollicitudin mauris ligula vitae nisi. Morbi tempor lacinia leo, at accumsan nisi lobortis at. Mauris eget porttitor urna. Donec malesuada commodo laoreet. Nam congue metus massa, eu ultrices libero consequat vitae. Nullam cursus convallis dui. Sed ut dui at elit dapibus posuere ac a neque. Vivamus tincidunt iaculis lectus quis mattis. Vestibulum hendrerit porttitor dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer tincidunt justo quis posuere maximus. Phasellus in consequat leo. Vivamus nunc ligula, semper non ex vel, posuere volutpat ex.</p><p>
-
-Cras finibus dapibus metus quis suscipit. Praesent convallis blandit magna quis hendrerit. Nulla vitae leo id metus auctor aliquet eget in nunc. Aliquam sed sapien diam. Praesent efficitur ac elit et aliquet. Fusce at posuere neque. Proin eget imperdiet ligula. Integer malesuada massa vel hendrerit iaculis. In mattis diam sed posuere pellentesque. </p> 
+                	<h2>Welcome</h2>
+                                  <p>Thank you for visiting our site. Virtual Planet was created by Carter Sills, Jason Turner, Rosalie Desilets, and Lisa Mason. This was a group project at Baker College for Web 231 Server-Side Programming. We used PHP to create the eCommerce gaming site. You are welcome to look around but please do not order anything, as the site is just a project.
+</p> 
 </div>                
 					<div id="games">
             				<div id="owl-demo2" class="owl-carousel margin-bottom">
@@ -117,37 +111,11 @@ Cras finibus dapibus metus quis suscipit. Praesent convallis blandit magna quis 
   
 </main>
        <footer>
-       	 <div class="footerformat">
-       	  
-          <div class="left">
- 			<h2>CATEGORIES</h2>
-            	<ul>
-                	<li><a href="">Action</a></li>
-                    <li><a href="">Fighter</a></li>
-                    <li><a href="">Role-Play</a></li>
-                    <li><a href="">Shooter</a></li>
-                </ul>
-            </div>
-             	
-                <div class="left">
-                  <img src="images/paypal.png">
-				</div>
-                
-                
-                
-                <div class="right">
- 			<h2>NAVIGATION</h2>
-            	<ul>
-                	<li><a href="">Account</a></li>
-                    <li><a href="">Wishlist</a></li>
-                    <li><a href="">Order History</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
-            </div>
-            
-           <div id="botbar">
-               </div>
-          </div>        
+       <p>Thank you for visiting Virtual Planet</p>
+       	<p>Created by Team 231 Jason~Carter~Christina~Lisa copyright 2016</p>
+       	<br><br/>
+       	
+       
        </footer>
        
        
@@ -180,7 +148,4 @@ Cras finibus dapibus metus quis suscipit. Praesent convallis blandit magna quis 
 
 
 </html>
-
-
-
 

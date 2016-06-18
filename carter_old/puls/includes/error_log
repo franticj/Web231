@@ -1,0 +1,2 @@
+[26-May-2016 03:55:06 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home2/csillsze/public_html/Web231/TeamProject/Web231/carter/puls/includes/config.php on line 43
+[26-May-2016 03:55:06 America/Denver] PHP Fatal error:  Call to undefined function randString() in /home2/csillsze/public_html/Web231/TeamProject/Web231/carter/puls/includes/config.php on line 43

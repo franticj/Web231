@@ -78,15 +78,6 @@ li a {
 	float:right;
 }
 
-
-/* ---- HEADER SEARCH BAR ---- */
-
-
-#searchbar {
-	margin-top:-10px;
-	float:right;
-	width:30%;	
-}
 ul.products {
 	padding: 0;
 	margin: 0;
@@ -107,10 +98,10 @@ ul.products li h3 {
 	margin: -10px -10px 10px -10px;
 	padding: 10px;
 	text-align: center;
-	background-color: #F5F5F5;
+	background-color: #000000;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 1.1em;
-	color: #5A5A5A;
+	color:#000000;
 }
 ul.products li fieldset {
 	border: none;
@@ -158,6 +149,7 @@ button:hover, .button:hover{
 	height: 40px;
 	overflow: hidden;
 	margin-top: 5px;
+	color:#000000;
 }
 
 ul.shopping-cart{
