@@ -21,6 +21,16 @@ body {
 	
 }
 
+#contact_form label.error {
+color:red;
+display:inline-block;
+}
+
+#contact_form input.error {
+border:1px solid red;
+display:inline-block;
+}
+
 html {
 	height: 100%;
 }

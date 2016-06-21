@@ -5,6 +5,10 @@
 <title>Virtual Planet - About Us</title>
 <link rel="stylesheet" type="text/css" href="style/aboutus.css"/>
 <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/additional-methods.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
 </head>
 
 <body>
@@ -55,7 +59,7 @@ else{
 </div>
 <div class="clearboth"></div>
 <div style="margin-top:100px;" align="center">
-<form  name="contactform" method="post" action="send_form_email.php">
+<form  name="contact_form" id="contact_form" method="post" action="send_form_email.php">
 
 <table width="450px" align="center" id="contactform">
 
@@ -151,6 +155,13 @@ else{
 
 </form>
 </div>
+<footer>
+       <p>Thank you for visiting Virtual Planet</p>
+       	<p>Created by Team 231 Jason~Carter~Christina~Lisa copyright 2016</p>
+       	<br><br/>
+       	
+       
+       </footer>
 </body>
 </html>
      </script>     					
