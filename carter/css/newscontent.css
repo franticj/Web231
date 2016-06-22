@@ -1,0 +1,189 @@
+/* ---- CONTENT ---- */
+
+#content { 
+  margin:1% auto;
+  height:auto;
+  text-align: left;
+  font-size: 120%;
+  width:96%;
+}
+
+
+#top_ten .imageclass {
+	width:70px;
+	display:inline-block;
+}
+
+#top_ten .imageclass img {
+    border: 1px solid #252525;
+}
+
+
+#top_ten .console {
+	display:inline-block;
+}
+
+#top_ten .console img {
+    float:right;
+}
+
+#top_ten .linkclass {
+	display:inline-block;
+}
+
+#top_ten .linkclass a {
+	color:#ff850c;
+	text-decoration:none;
+}
+
+#top_ten .linkclass a:hover {
+	color:#01ce0f;
+	text-decoration:none;
+}
+
+
+#top_ten {
+    height: auto;
+    background-color:#333;
+	display:inline-block;
+}
+
+#top_ten h1 {
+	text-align:center;
+}
+
+
+#top_ten ul {
+	list-style-type: none;
+ 	display:inline-block;
+	padding:0;
+}
+
+#top_ten ul li {	
+    border-bottom: solid 1px #252525;
+	padding:0.5em;
+
+}
+
+	
+
+#top_ten .top {
+	width: 30%;
+	height: auto;
+    padding: 1%;
+}
+
+#top_ten .top > ul {
+	list-style-type: none;
+ 	display:inline-block;
+	padding:0;
+
+}
+
+
+#top_ten .top > ul li {	
+	padding:0.5em;
+
+}
+
+
+/* NEWS PANEL */
+.news {
+	width:70%;
+	float:left;
+	padding-right:5%;
+}
+
+
+.clear {
+	clear:both;
+}
+
+
+
+.services {
+	margin:34px 0 0 0; 
+	padding:0px; 
+	display:inline-block;
+}
+
+.services h2 {
+	width:604px; 
+	margin:0px; 
+	padding:0px; 
+	display:inline-block;
+	font-size:24px; 
+	line-height:28px; 
+	font-weight:normal;
+}
+
+ .services img { 
+	margin:15px 15px 0 0; 
+	padding:0 0 0 0; 
+	float:left; 
+	border: 2px solid #252525;
+}
+
+.services p { 
+	margin:14px 0 0 0; 
+	padding:0 0 0 20px; 
+	color:#252525;
+	font-size:12px; 
+	line-height:16px;
+}
+
+.services h3 { 
+	margin:13px 0 0 0; 
+	font-size:18px;  
+	line-height:22px; 
+	font-weight:normal;
+	color:#ff850c;
+}
+
+.services ul{
+	margin:5px 0 0 0; 
+	padding:0 0 0 20px; 
+	float:right; 
+	display:block;
+}
+
+ .services ul li {
+	margin:0px;
+	padding:0px; 
+	display:block;
+}
+
+.services ul li a {
+	width:100px; 
+	height:22px; 
+	margin:0px; 
+	padding:0 0 0 18px;  
+	text-align:right;
+	font-size:11px; 
+	line-height:20px; 
+	font-weight:bold; 
+	text-decoration:none; 
+	border-bottom:#252525 dashed 1px; 
+}
+
+.services ul li a.bottom {
+	width:400px; 
+	height:22px; 
+	margin:0px;
+	padding:0 0 0 18px; 
+	float:left; 	
+	font-size:11px; 
+	color:#01ce0f; 
+	line-height:20px; 
+	text-decoration:none; 
+	border-bottom:0px; 
+	background:url(images/listStyle.png) no-repeat 2px 6px;
+}
+
+.border {
+    clear: both !important;
+    height: 22px !important;
+    border-top: solid 2px #01ce0f;
+    margin-top: 22px;
+	width:auto;
+}
