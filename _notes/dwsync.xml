@@ -3,16 +3,14 @@
 <file name="htmlTestPage.html" server="csills02.com" local="131079504253206385" remote="131079408000000000" Dst="2" />
 <file name="phpTestPage.php" server="csills02.com" local="131079504253236386" remote="131079408000000000" Dst="2" />
 <file name="README.md" server="csills02.com" local="131079504253196384" remote="131079408000000000" Dst="2" />
-<file name="index.php" server="csills02.com" local="131087270510467284" remote="131087164200000000" Dst="2" />
 <file name="redirect.php" server="csills02.com" local="131080877010642265" remote="131080770600000000" Dst="2" />
 <file name="orderhistory.php" server="csills02.com" local="131088702347568561" remote="131088594000000000" Dst="2" />
-<file name="config.php" server="csills02.com" local="131088665692914584" remote="131088558600000000" Dst="2" />
 <file name="aboutus.php" server="csills02.com" local="131087270459584374" remote="131088030600000000" Dst="2" />
 <file name="cart.php" server="csills02.com" local="131084032668682125" remote="131088030600000000" Dst="2" />
 <file name="cart_update.php" server="csills02.com" local="131084249161573402" remote="131088031800000000" Dst="2" />
 <file name="Home.html" server="csills02.com" local="131087270510367278" remote="131088032400000000" Dst="2" />
-<file name="jturneon_virtualcart.sql" server="csills02.com" local="131087270510507286" remote="131088033600000000" Dst="2" />
 <file name="products.php" server="csills02.com" local="131089112659601177" remote="131089004400000000" Dst="2" />
-<file name="shooter.php" server="csills02.com" local="131088663023006911" remote="131088556200000000" Dst="2" />
-<file name="fighting.php" server="csills02.com" local="131088663022956908" remote="131089365000000000" Dst="2" />
+<file name="index_OLD.php" server="csills02.com" local="131087270510467284" remote="131110521000000000" Dst="2" />
+<file name="index.txt" server="csills02.com" local="131087164200000000" remote="131087164200000000" Dst="2" />
+<file name="config.txt" server="csills02.com" local="131088665692914584" remote="131110522800000000" Dst="2" />
 </dwsync>
