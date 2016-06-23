@@ -73,7 +73,7 @@ else{
 
  <td valign="top">
 
-  <input  type="text" name="first_name" maxlength="50" size="30">
+  <input  type="text" name="first_name" maxlength="50" size="30" value="<?php if (isset($_POST['submit'])){ echo $_POST['first_name'];}?>"/>
 
  </td>
 
@@ -89,8 +89,7 @@ else{
 
  <td valign="top">
 
-  <input  type="text" name="last_name" maxlength="50" size="30">
-
+            <input  type="text" name="last_name" maxlength="50" size="30" value="<?php if (isset($_POST['submit'])){ echo $_POST['last_name'];}?>"/>
  </td>
 
 </tr>
@@ -105,7 +104,7 @@ else{
 
  <td valign="top">
 
-  <input  type="text" name="email" maxlength="80" size="30">
+  <input  type="text" name="email" maxlength="80" size="30" value="<?php if (isset($_POST['submit'])){ echo $_POST['email'];}?>"/>
 
  </td>
 
@@ -121,7 +120,7 @@ else{
 
  <td valign="top">
 
-  <input  type="text" name="telephone" maxlength="30" size="30">
+  <input  type="text" name="telephone" maxlength="30" size="30"value="<?php if (isset($_POST['submit'])){ echo $_POST['telephone'];}?>"/>
 
  </td>
 
@@ -137,7 +136,7 @@ else{
 
  <td valign="top">
 
-  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"><?php if (isset($_POST['submit'])){ echo $_POST['comments'];}?></textarea>
 
  </td>
 
@@ -147,7 +146,7 @@ else{
 
  <td colspan="2" style="text-align:center">
 
-  <input type="submit" value="Submit"></td>
+  <input name="submit" type="submit" id="submit" value="Submit"></td>
 
 </tr>
 
